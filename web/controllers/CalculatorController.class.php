@@ -66,7 +66,7 @@ class CalculatorController{
         $returnObj['success'] = true;
         try {
             $CalculatorObj = new Calculator($expression);
-            $result = $CalculatorObj->evaluteExpression();
+            $returnObj['result'] = $CalculatorObj->evaluteExpression();
         } catch(Exception $e){
             $returnObj['errorMessage'] = $e->getMessage();
             $returnObj['success'] = false;
